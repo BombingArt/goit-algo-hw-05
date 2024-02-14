@@ -20,6 +20,8 @@ def input_error(func):
 @input_error
 def add_contact(args, contacts):
     name, phone = args
+    if name in contacts:
+        return "Contact already exists"
     contacts[name] = int(phone)
     return "Contact added."
 
@@ -27,6 +29,8 @@ def add_contact(args, contacts):
 @input_error
 def change_contact(args, contacts):
     name, phone = args
+    if name not in contacts:
+        return "Contact not found"
     contacts[name] = int(phone)
     return "Contact changed"
 
