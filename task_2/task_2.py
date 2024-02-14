@@ -3,7 +3,7 @@ import re
 
 
 def generator_numbers(text: str):
-    string_numbers = re.findall('\d+\.\d+', text)
+    string_numbers = re.findall('\b\d+\.\d+\b', text)
     for number in string_numbers:
         yield float(number)
 
