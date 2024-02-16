@@ -48,8 +48,6 @@ def display_log_counts(counts: dict):
         print(key, ' ' * (len(log_level_column) - len(key)) + "|", value)
 
 
-
-
 if __name__ == '__main__':
     
     file_path = sys.argv[1]
